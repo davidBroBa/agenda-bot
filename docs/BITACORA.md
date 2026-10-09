@@ -87,7 +87,6 @@ Incidencia y lección: el primer `put` al servidor con ruta absoluta creó un
 ### Pendiente
 
 - Crear `AGENTS.md` del proyecto, `docs/GATES.md` y la spec `001-bot-basico/`.
-- Aprobación final del diseño para arrancar la Fase 1 (bot básico).
 
 ---
 
@@ -112,7 +111,27 @@ exige para decisiones difíciles de revertir.
 
 Verificación: revisión contra las plantillas de la skill; commit y push a GitHub.
 
+---
+
+## 2026-10-09 — Revisión y aprobación de los supuestos del SDD
+
+Qué se hizo: revisión uno a uno de los supuestos del SDD §1.3 con el usuario.
+
+Resultado (todos confirmados):
+
+- **S1** ubicación: `~/proyectos/agenda-bot/` (ya en uso).
+- **S2** zona horaria por defecto: `America/Mexico_City` (coincide con la del
+  servidor, verificada con `timedatectl`: CST, -0600, NTP activo).
+- **S3** base de datos: una instancia `postgres:17`, base `agenda`.
+- **S4** motor de recordatorios: worker propio fuera de n8n.
+- **S5** usuarios: solo David (volumen personal).
+- **S6** repo público sin secretos (ya decidido antes).
+
+El SDD queda **aprobado** (supuestos S1-S6 confirmados).
+
+Verificación: respuestas del usuario; `timedatectl` en `srv` para S2.
+
 ### Pendiente
 
 - Crear `AGENTS.md` del proyecto, `docs/GATES.md` y la spec `001-bot-basico/`.
-- Aprobación final del diseño para arrancar la Fase 1 (bot básico).
+- Arrancar la Fase 1 tras aprobar la spec.

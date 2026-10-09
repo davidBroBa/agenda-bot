@@ -42,16 +42,19 @@ sistema.
 
 ### 1.3 Supuestos
 
-Decisiones tomadas por omisión porque el usuario no las especificó. **Revisar con él.**
+Decisiones tomadas por omisión porque el usuario no las especificó. **Revisadas y
+confirmadas con el usuario el 2026-10-09.**
 
-| # | Supuesto | Impacto si es falso | Quién confirma |
+| # | Supuesto | Impacto si es falso | Confirmado por |
 |---|---|---|---|
-| S1 | El proyecto vive en `~/proyectos/agenda-bot/` del servidor `srv` | Cambia rutas, Compose y scripts | David |
-| S2 | Zona horaria por defecto `America/Mexico_City` (configurable por usuario) | Avisos a horas equivocadas si el usuario está en otra zona | David |
-| S3 | Una sola instancia `postgres:17`, base `agenda` | Requiere otro contenedor o esquema | David |
-| S4 | El motor de recordatorios es un proceso propio, no n8n | Habría que rehacer la ruta crítica en n8n | David |
-| S5 | El volumen de uso es personal: < 10 usuarios y < 10 000 tareas | El diseño simple podría no escalar | David |
-| S6 | El bot es de uso privado; el repo puede ser público pero sin secretos | Exposición de datos si se descuida | David |
+| S1 | El proyecto vive en `~/proyectos/agenda-bot/` del servidor `srv` | Cambia rutas, Compose y scripts | David · 2026-10-09 |
+| S2 | Zona horaria por defecto `America/Mexico_City` (configurable por usuario) | Avisos a horas equivocadas si el usuario está en otra zona | David · 2026-10-09 |
+| S3 | Una sola instancia `postgres:17`, base `agenda` | Requiere otro contenedor o esquema | David · 2026-10-09 |
+| S4 | El motor de recordatorios es un proceso propio, no n8n | Habría que rehacer la ruta crítica en n8n | David · 2026-10-09 |
+| S5 | Un solo usuario (David) y volumen personal | El diseño simple podría no escalar | David · 2026-10-09 |
+| S6 | El bot es de uso privado; el repo es público pero sin secretos | Exposición de datos si se descuida | David · 2026-10-09 |
+
+> **Estado:** los seis supuestos quedaron confirmados por David el 2026-10-09.
 
 ### 1.4 Glosario
 
@@ -532,4 +535,4 @@ No aplica: la IA sí se usa. Ver secciones anteriores.
 
 | Rol | Nombre | Fecha | Decisión |
 |---|---|---|---|
-| Responsable del proyecto | David | 2026-10-09 | Pendiente |
+| Responsable del proyecto | David | 2026-10-09 | Aprobado (supuestos S1-S6 confirmados) |

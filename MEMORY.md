@@ -25,8 +25,10 @@ Fase actual: **0 — documentación y diseño**. No hay código ni servicios des
   empuja con la deploy key `~/.ssh/agenda_deploy`.
 - Verificado con: `srv.ps1 exec` (uname, docker ps, ss, curl Telegram, Caddyfile),
   `docker inspect n8n`, `git push` + `git ls-files`.
-- Pendiente: aprobación final del diseño; crear `AGENTS.md`, `docs/GATES.md` y la
-  spec `001-bot-basico/`; arrancar la Fase 1.
+- Diseño **aprobado**: supuestos S1-S6 del SDD §1.3 confirmados por David el
+  2026-10-09.
+- Pendiente: crear `AGENTS.md`, `docs/GATES.md` y la spec `001-bot-basico/`;
+  arrancar la Fase 1.
 
 ## Próximos pasos
 
