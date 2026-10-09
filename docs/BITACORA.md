@@ -62,9 +62,29 @@ Decisiones confirmadas por el usuario:
 
 Detalle completo en `docs/ARQUITECTURA.md`.
 
+### 5. Publicación en GitHub
+
+Qué se hizo: creación del repositorio y primer push.
+
+- Autenticación: el gestor de credenciales de Windows guardaba un token OAuth
+  (tipo `gho_`, scopes `repo, workflow, gist`) de la cuenta `davidBroBa`. Con él se
+  creó el repositorio vía API.
+- Repositorio: [`github.com/davidBroBa/agenda-bot`](https://github.com/davidBroBa/agenda-bot),
+  **público**, rama `main`.
+- Para que el **servidor** pueda subir sin guardar el token en disco, se generó una
+  **deploy key** SSH (`~/.ssh/agenda_deploy`) y se añadió al repositorio con permiso
+  de escritura. El `core.sshCommand` del repo la usa.
+- Primer commit `7230727` con 7 ficheros versionados.
+
+Verificación: `git push -u origin main` (nueva rama `main`), `git log --oneline -3`,
+`git ls-files`.
+
+Incidencia y lección: el primer `put` al servidor con ruta absoluta creó un
+árbol anidado (`~/proyectos/home/...`) porque `srv.ps1 put` prefija la ruta con
+`~/proyectos` si no empieza por `~`. Se corrigió usando ruta **relativa**
+(`agenda-bot`).
+
 ### Pendiente
 
-- Autenticación con GitHub para crear el repositorio y subir (token del gestor de
-  credenciales de Windows / `gh` en el servidor).
 - Aprobación final del diseño para arrancar la Fase 1 (bot básico).
 - Crear `constitution.md`, `docs/SDD.md`, `docs/THREATS.md`, `docs/AI.md`.

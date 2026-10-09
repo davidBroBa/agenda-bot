@@ -19,10 +19,12 @@ Fase actual: **0 — documentación y diseño**. No hay código ni servicios des
 
 - Hecho: diagnóstico del servidor, inventario de servicios, exploración de
   skills/agentes/recursos, diseño y documentación inicial.
+- Repositorio publicado: `github.com/davidBroBa/agenda-bot` (público). El servidor
+  empuja con la deploy key `~/.ssh/agenda_deploy`.
 - Verificado con: `srv.ps1 exec` (uname, docker ps, ss, curl Telegram, Caddyfile),
-  `docker inspect n8n`.
-- Pendiente: autenticación GitHub; aprobación final para Fase 1; crear
-  `constitution.md`, `docs/SDD.md`, `docs/THREATS.md`, `docs/AI.md`.
+  `docker inspect n8n`, `git push` + `git ls-files`.
+- Pendiente: aprobación final para Fase 1; crear `constitution.md`,
+  `docs/SDD.md`, `docs/THREATS.md`, `docs/AI.md`.
 
 ## Próximos pasos
 

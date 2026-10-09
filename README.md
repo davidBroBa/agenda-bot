@@ -5,7 +5,7 @@ de un bot de Telegram. La automatización se apoya en un n8n, los datos viven en
 PostgreSQL y el motor de recordatorios es un servicio propio en Python.
 
 - **Estado:** Fase 0 — documentación y diseño. Sin código ni servicios desplegados.
-- **Repositorio:** pendiente de crear en GitHub (cuenta `davidBroBa`).
+- **Repositorio:** [`github.com/davidBroBa/agenda-bot`](https://github.com/davidBroBa/agenda-bot) (público, rama `main`).
 - **Servidor de trabajo:** alias SSH `srv` (Ubuntu 26.04, Docker).
 - **Copia de trabajo:** `~/proyectos/agenda-bot/` en `srv`.
 
