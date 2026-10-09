@@ -1,0 +1,27 @@
+# Secretos y artefactos locales
+.env
+.env.*
+!.env.example
+
+# Base de datos y backups
+*.sqlite
+*.dump
+backups/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node (por si se añade tooling)
+node_modules/
+npm-debug.log*
+
+# Docker / sistema
+*.log
+.DS_Store
+Thumbs.db
