@@ -86,5 +86,33 @@ Incidencia y lección: el primer `put` al servidor con ruta absoluta creó un
 
 ### Pendiente
 
+- Crear `AGENTS.md` del proyecto, `docs/GATES.md` y la spec `001-bot-basico/`.
 - Aprobación final del diseño para arrancar la Fase 1 (bot básico).
-- Crear `constitution.md`, `docs/SDD.md`, `docs/THREATS.md`, `docs/AI.md`.
+
+---
+
+## 2026-10-09 — Fase 0 (cont.): documentos de diseño
+
+Qué se hizo: redacción de los documentos obligatorios del marco
+`proyecto-estandar`, siguiendo sus plantillas.
+
+- `constitution.md` — principios no negociables (tipado estricto, test-first,
+  SDD spec-anchored, privacidad, fiabilidad, honestidad).
+- `docs/SDD.md` — arquitectura, componentes, modelo de datos, interfaces, flujo de
+  datos, seguridad, plan por fases y riesgos.
+- `docs/THREATS.md` — STRIDE por activo, top 10 de mitigaciones priorizadas,
+  riesgos aceptados y su verificación.
+- `docs/AI.md` — capa de IA (Ollama local `qwen3:8b`), prompts, guardrails,
+  evaluación, coste 0 y límites.
+- `docs/NETWORK.md` — topología **sin tráfico entrante**, puertos y timeouts.
+- `docs/adr/0001..0004` — cuatro decisiones clave con sus consecuencias negativas.
+
+Se añadieron `docs/NETWORK.md` y los ADR porque el SDD los cita y el marco los
+exige para decisiones difíciles de revertir.
+
+Verificación: revisión contra las plantillas de la skill; commit y push a GitHub.
+
+### Pendiente
+
+- Crear `AGENTS.md` del proyecto, `docs/GATES.md` y la spec `001-bot-basico/`.
+- Aprobación final del diseño para arrancar la Fase 1 (bot básico).
