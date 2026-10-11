@@ -27,11 +27,14 @@ Fase actual: **0 — documentación y diseño**. No hay código ni servicios des
   `docker inspect n8n`, `git push` + `git ls-files`.
 - Diseño **aprobado**: supuestos S1-S6 del SDD §1.3 confirmados por David el
   2026-10-09.
-- Pendiente: crear `AGENTS.md`, `docs/GATES.md` y la spec `001-bot-basico/`;
-  arrancar la Fase 1.
+- Creados el `AGENTS.md` del proyecto y `docs/HERRAMIENTAS.md` (skills y MCP
+  recomendados) el 2026-10-10.
+- Pendiente: decidir `docs/HERRAMIENTAS.md` §5; crear `docs/GATES.md` y la spec
+  `001-bot-basico/`; arrancar la Fase 1.
 
 ## Próximos pasos
 
-1. Resolver publicación en GitHub.
-2. Aprobar el diseño y redactar la spec `001-bot-basico` (EARS) con el agente `planner`.
+1. Decidir las 4 opciones de `docs/HERRAMIENTAS.md` §5 (config MCP, Postgres MCP,
+   skills propias).
+2. Redactar la spec `001-bot-basico` (EARS) con el agente `planner`.
 3. Implementar Fase 1 con test-first.

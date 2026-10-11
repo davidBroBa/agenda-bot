@@ -133,5 +133,38 @@ Verificación: respuestas del usuario; `timedatectl` en `srv` para S2.
 
 ### Pendiente
 
-- Crear `AGENTS.md` del proyecto, `docs/GATES.md` y la spec `001-bot-basico/`.
+- Crear `docs/GATES.md` y la spec `001-bot-basico/`.
+- Arrancar la Fase 1 tras aprobar la spec.
+
+---
+
+## 2026-10-10 — Agentes, skills y MCP (documentados)
+
+Qué se hizo: creado el `AGENTS.md` del proyecto y documentadas en
+`docs/HERRAMIENTAS.md` las recomendaciones de skills y servidores MCP.
+
+- `AGENTS.md` del repo: qué es, stack, comandos, convenciones, reglas de dominio
+  (no recrear n8n, idempotencia, zonas horarias), límites y verificación.
+- Investigación de **skills**: revisadas colecciones comunitarias (open-hax,
+  DamingDong 285+, Crandel, dimkurilo) y el plugin npm `opencode-skills-collection`.
+  Decisión: **no** instalar colecciones masivas (riesgo de cadena de suministro,
+  instaladores con `curl | bash`, ruido en el contexto); en su lugar, crear 3
+  skills propias del proyecto.
+- Investigación de **MCP**: `postgres-mcp` (crystaldba, read-only + túnel SSH)
+  recomendado; n8n MCP pospuesto (obligaría a reiniciar el n8n existente);
+  Telegram MCP opcional; Docker MCP Gateway descartado (necesita Docker Desktop).
+- Hallazgo: el `opencode.json` usa la forma **V1** de `mcp` (`mcp.<nombre>` +
+  `enabled`); OpenCode v2 espera `mcp.servers` y `opencode mcp list` no lo lee
+  ("No MCP servers configured"). El cliente de escritorio registra `context7` por
+  su cuenta. No se cambió la config sin autorización.
+
+Verificación: lectura de `~/.config/opencode/opencode.json`, `opencode --version`
+(`2.0.19`) y `opencode mcp list`; documentación V2 y repos citados en
+`docs/HERRAMIENTAS.md`. Commit y push a GitHub.
+
+### Pendiente
+
+- Decisiones abiertas de `docs/HERRAMIENTAS.md` §5 (migrar config MCP, instalar
+  Postgres MCP, crear skills propias).
+- Crear `docs/GATES.md` y la spec `001-bot-basico/`.
 - Arrancar la Fase 1 tras aprobar la spec.
